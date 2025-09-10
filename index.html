@@ -1,0 +1,170 @@
+Aqui está seu código **unificado e corrigido** (removi duplicações, arrumei a ordem das tags e mantive tudo em um único bloco organizado):
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Meu Site FIEC</title>
+  <style>
+    header {
+      background-color: #000000;
+      color: darkred;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 120px;
+      margin-right: 15px;
+    }
+
+    header h1 {
+      font-size: 44px;
+    }
+
+    nav {
+      background-color: red;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: darkred;
+    }
+
+    main {
+      flex: 1;
+      padding: 30px 20px;
+      background-color: #ffffff;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 14px;
+    }
+
+    .opala,
+    .maverick,
+    .dodge,
+    .camaro {
+      width: 800px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://images.seeklogo.com/logo-png/17/1/maverick-logo-png_seeklogo-176138.png" alt="Logo carro cabuloso" class="logo">
+    <h1>Carros Brutos</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="https://www.noreserveclassics.com/vehicles/332/1970-dodge-charger-r-t-hemi-powered-v8-5-speed-pro-touring-restomod">BRUTAL</a></li>
+      <li><a href="https://www.tunadocars.com.br/estoque">CABULOSO</a></li>
+      <li><a href="https://www.automiami.com.br/">SLK JHOW</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <center>
+      <h2>Eai meu princeso</h2>
+      <p>Este é um site onde você vê se é macho ou não</p>
+      <p>Preparado?</p>
+      <p>Dê uma olhada nessas beldades e veja se gosta, me prove o quão macho você é</p>
+
+      <img src="https://image1.mobiauto.com.br/images/api/images/v1.0/405109094/transform/fl_progressive,f_webp,q_70,w_800" alt="camaro" class="camaro">
+      <img src="https://www.topgear.com/sites/default/files/images/cars-road-test/carousel/2015/07/ac495d64593fd2ffd63a94d29b2eb3a8/viperacr1.jpg?w=892&h=502" alt="dodge" class="dodge">
+      <img src="https://vintageclassicos.com.br/wp-content/uploads/2023/08/WhatsApp-Image-2023-08-04-at-09.49.18.jpeg" alt="maverick" class="maverick">
+      <img src="https://www.tupi.fm/wp-content/uploads/2025/01/Chevrolet-Opala-SS.webp" alt="opala" class="opala">
+
+      <br>
+      <h1>O QUE VOCÊ ACHOU DOS CARROS BEBELO</h1>
+
+      <form id="formulario" onsubmit="enviarFormulario(event)">
+        <label for="time">Escolha uma opção:</label>
+        <select name="time" id="time" required>
+          <option value="" disabled selected>--Selecione--</option>
+          <option value="bota">FODAAA</option>
+          <option value="fla">O TOPS</option>
+          <option value="flu">MEIO MEH</option>
+          <option value="vasco">NÃO GOSTEI</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Enviar" />
+        <input type="button" value="Cancelar" onclick="cancelarFormulario()" />
+      </form>
+
+      <p id="mensagem" style="font-weight: bold; margin-top: 20px;"></p>
+      <br>
+      <p>Caso não tenha gostado das mensagens, recomendo acessar lá em cima: BRUTAL, CABULOSO, SLK JHOW</p>
+    </center>
+  </main>
+
+  <footer>
+    <p>&copy; COPIA NÂO COMÉDIA.</p>
+  </footer>
+
+  <script>
+    function enviarFormulario(event) {
+      event.preventDefault();
+      const select = document.getElementById("time");
+      const valor = select.value;
+      const mensagem = document.getElementById("mensagem");
+      switch (valor) {
+        case "bota":
+          mensagem.textContent = "💪 Você é muito macho!";
+          break;
+        case "fla":
+          mensagem.textContent = "👌 Você é bem machinho.";
+          break;
+        case "flu":
+          mensagem.textContent = "🤷‍♂️ Você não é macho irmão.";
+          break;
+        case "vasco":
+          mensagem.textContent = "Irmão, se quer uma saia?";
+          break;
+        default:
+          mensagem.textContent = "Escolha uma opção válida.";
+      }
+    }
+
+    function cancelarFormulario() {
+      document.getElementById("formulario").reset();
+      document.getElementById("mensagem").textContent = "";
+    }
+  </script>
+</body>
+</html>
+```
+
+Quer que eu deixe esse código **mais profissional e responsivo** (com melhorias no layout e sem usar `<center>`, por exemplo)?
